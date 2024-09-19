@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SeasideBliss</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Seasidebliss.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnH/PRFb13lfpZZY0d9G6XSlFRQDfFWvb66HB1F5p1xOAQ1SSTjH2+iZjGxeP2wKcbUlL+pg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- Flexbox wrapper to contain all content -->
+        <!-- Header -->
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#home">
+                        <img src="/images/logo1.jfif" alt="Logo" class="logo-img" style="height: 50px;">
+                        <span class="brand-name">Seaside Bliss</span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-page="/Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-page="/Bookings"> Bookings</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-page="/Gallery">Gallery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-page="/Experiences">Experiences</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Account
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" asp-page="/Login">Log In</a></li>
+                                    <li><a class="dropdown-item" asp-page="/Register">Register</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li>
+                                        <form method="post" asp-page="/Logout" style="padding: .5rem 1rem;">
+                                            <button type="submit" class="dropdown-item" style="cursor:pointer">Logout</button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+
+
+        <!-- Footer -->
+        <footer class="border-top bg-primary text-white py-4 mt-auto">
+            <div class="container">
+                <div class="sec aboutus">
+                    <h2>About us</h2>
+                    <p>
+                        At Seasidebliss, we are dedicated to making your seaside holiday unforgettable. Our platform offers a seamless booking experience, connecting you with the best accommodations and local services, including airport transfers and tours. We prioritize transparency by offering commission-free services, benefiting both travelers and service providers. With a focus on local culture and lifestyle, we aim to make your stay more than just a getaway—it's an immersive experience.
+
+                    </p>
+                    <ul class="sci">
+                        <li><a href="https://www.facebook.com/Seasidebliss"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.instagram.com/Seasidebliss/"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="https://twitter.com/Seasidebliss"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="https://pf.linkedin.com/in/Seasidebliss"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+                <div class="sec findus">
+                    <h2>Find us</h2>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2898.5419957976483!2d16.78203077509457!3d43.407501468288956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDPCsDI0JzI0LjciTiAxNsKwNDcnMDMuNyJF!5e0!3m2!1sen!2suk!4v1726061888444!5m2!1sen!2suk" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="sec contact">
+                    <h2>Contact us</h2>
+                    <ul class="info">
+                        <li>
+                            <span><i class="fab fa-phone" aria-hidden="true"></i></span>
+                            <p><a href:"Tel: +385111111">Tel: +385 11 11 11</a></p>
+                        </li>
+                        <li>
+                            <span><i class="fab fa-envelope" aria-hidden="true"></i></span>
+                            <p><a href:"Email: info@seasidebliss.com">Email: info@seasidebliss.com</a></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container">
+                &copy; 2024 - SeasideBliss - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

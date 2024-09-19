@@ -1,0 +1,115 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<body>
+
+    <!-- Display success message if available -->
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+
+ <!-- Main Content -->
+<div class="maincontent">
+
+
+ <!-- Banner -->
+<div id="home" class="banner">
+            <div class="center">
+                <h1 class="header-title"><br>Seaside Bliss</h1>
+                <br><h4>Croatian Coast</h4>
+                <br><p>Book your dream stay now and unwind at Seaside Bliss!</p>
+                <form method="get" asp-page="/Bookings" class="bookingbutton">
+                    <button type="submit" class="btn btn-primary">Book Now</button>
+                </form>
+            </div>
+</div>
+
+<!-- Tours Section -->
+<div id="toursect">
+        <div class="tour">
+        <div class="center">
+          <div class="image-container">
+            <img src="/images/sea1.png" />
+          </div>
+          <div class="content">
+            <h2>Beach locations</h2>
+            <h3>We have plenty of Beach locations To choose from</h3>
+          </div>
+        </div>
+      </div>
+      <div class="tour">
+        <div class="center">
+          <div class="image-container">
+            <img src="/images/town.png" />
+          </div>
+          <div class="content">
+            <h2>Town Locations</h2>
+            <h3>Inland locations are just as exciting</h3>
+          </div>
+        </div>
+      </div>
+</div>
+ 
+
+<!-- Gallery Section -->
+    <div id="gallerysect">
+      <div class="content center">
+        <h2>Over 20+ locations to choose from</h2>
+        <h3>Enjoy over 20+ locations on the ilands, beaches, sea towns or the land</h3>
+      </div>
+      <div class="images-container">
+        <div class="image-container">
+          <img src="/images/land1.png" />
+        </div>
+		<div class="image-container">
+          <img src="/images/land.png" />
+        </div>
+        <div class="image-container">
+          <img src="/images/sea1.png" />
+        </div>
+        <div class="image-container">
+          <img src="/images/beach.png" />
+        </div>
+		<div class="image-container">
+          <img src="/images/town2.png" />
+        </div>
+		<div class="image-container">
+          <img src="/images/sea2.png" />
+        </div>
+        <div class="image-container extra">
+          <img src="/images/land3.png" />
+        </div>
+      </div>
+    </div>		
+	
+	<!-- Reviews Section -->
+        <!-- Testimonial Section -->
+        <div id="testsect">
+            <div class="testimonial-container">
+                <div class="testimonial">
+                    <p class="quote">“A wonderful experience, amazing scenery and friendly hosts.”</p>
+                    <p class="author">- John D.</p>
+                </div>
+                <div class="testimonial">
+                    <p class="quote">“An unforgettable experience, loved every moment!”</p>
+                    <p class="author">- Maria S.</p>
+                </div>
+                <div class="testimonial">
+                    <p class="quote">“Beautiful locations and excellent service!”</p>
+                    <p class="author">- David K.</p>
+                </div>
+                <div class="testimonial">
+                    <p class="quote">“Incredible service! Will book again for our next vacation.”</p>
+                    <p class="author">- Alice J.</p>
+                </div>
+            </div>
+        </div>
+
+</div>
+</body>

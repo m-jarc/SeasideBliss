@@ -1,0 +1,148 @@
+﻿@page
+@model SeasideBliss.Pages.GalleryModel
+@{
+}
+
+<body>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+    <section class="gallery_p">
+        <div class="accomodation_description">
+            <h2>Accomodation Overview </h2>
+            <p>Our accommodations are designed to meet your every need, offering state-of-the-art amenities that ensure your stay is nothing short of extraordinary. The outdoor pool provides the perfect spot to cool off while taking in panoramic views of the coastline, and our luxurious jacuzzi invites you to relax after a day of adventure. For those who enjoy staying active, our fully equipped gym features modern fitness equipment to help you maintain your workout routine even while on vacation.</p>
+        </div>
+        <div id="gallery">
+            <div><img src="~/images/rooms.jpg" /><a href="#lightbox-1"></a></div>
+            <div><img src="~/images/view1.jpg" /><a href="#lightbox-2"></a></div>
+            <div><img src="~/images/rooms1.jpg" /><a href="#lightbox-3"></a></div>
+            <div><img src="~/images/villa1.jpg" /><a href="#lightbox-4"></a></div>
+            <div><img src="~/images/rooms2.jpg" /><a href="#lightbox-5"></a></div>
+            <div><img src="~/images/rooms3.jpg" /><a href="#lightbox-6"></a></div>
+            <div><img src="~/images/villa2.jpg" /><a href="#lightbox-7"></a></div>
+            <div><img src="~/images/view2.jpg" /><a href="#lightbox-8"></a></div>
+            <div><img src="~/images/rooms4.jpg" /><a href="#lightbox-9"></a></div>
+            <div><img src="~/images/villa3.jpg" /><a href="#lightbox-10"></a></div>
+            <div><img src="~/images/rooms5.jpg" /><a href="#lightbox-11"></a></div>
+            <div><img src="~/images/villa4.jpg" /><a href="#lightbox-12"></a></div>
+            <div><img src="~/images/view3.jpg" /><a href="#lightbox-13"></a></div>
+            <div><img src="~/images/rooms6.jpg" /><a href="#lightbox-14"></a></div>
+            <div><img src="~/images/villa5.jpg" /><a href="#lightbox-15"></a></div>
+            <div><img src="~/images/rooms7.jpg" /><a href="#lightbox-16"></a></div>
+            <div><img src="~/images/villa6.jpg" /><a href="#lightbox-17"></a></div>
+            <div><img src="~/images/rooms8.jpg" /><a href="#lightbox-18"></a></div>
+        </div>
+        <div class="lightbox" id="lightbox-1">
+            <div class="content">
+                <img src="~/images/rooms.jpg" />
+                <div class="title">Seaview Apartment</div><a class="close" href="#gallery"></a>
+            </div>
+        </div>
+        <div class="lightbox" id="lightbox-2">
+            <div class="content">
+                <img src="~/images/view1.jpg" />
+                <div class="title">Astonishing View</div><a class="close" href="#gallery"></a>
+            </div>
+        </div>
+        <div class="lightbox" id="lightbox-3">
+            <div class="content">
+                <img src="~/images/rooms1.jpg" />
+                <div class="title">Luxury Rooms</div><a class="close" href="#gallery"></a>
+            </div>
+        </div>
+        <div class="lightbox" id="lightbox-4">
+            <div class="content">
+                <img src="~/images/villa1.jpg" />
+                <div class="title">Luxury Villa</div><a class="close" href="#gallery"></a>
+            </div>
+        </div>
+        <div class="lightbox" id="lightbox-5">
+            <div class="content">
+                <img src="~/images/rooms2.jpg" />
+                <div class="title">Part Seaview Balcony</div><a class="close" href="#gallery"></a>
+            </div>
+        </div>
+        <div class="lightbox" id="lightbox-6">
+            <div class="content">
+                <img src="~/images/rooms3.jpg" />
+                <div class="title">Relaxing Rooms</div><a class="close" href="#gallery"></a>
+            </div>
+        </div>
+        <div class="lightbox" id="lightbox-7">
+            <div class="content">
+                <img src="~/images/villa2.jpg" />
+                <div class="title">Relaxing Swimming Pool</div><a class="close" href="#gallery"></a>
+            </div>
+        </div>
+        <div class="lightbox" id="lightbox-8">
+            <div class="content">
+                <img src="~/images/view2.jpg" />
+                <div class="title">Beautiful Beaches</div><a class="close" href="#gallery"></a>
+            </div>
+        </div>
+        <div class="lightbox" id="lightbox-9">
+            <div class="content">
+                <img src="~/images/rooms4.jpg" />
+                <div class="title">Bathroom</div><a class="close" href="#gallery"></a>
+            </div>
+        </div>
+        <div class="lightbox" id="lightbox-10">
+            <div class="content">
+                <img src="~/images/villa3.jpg" />
+                <div class="title">Jaccuzzi</div><a class="close" href="#gallery"></a>
+            </div>
+        </div>
+        <div class="lightbox" id="lightbox-11">
+            <div class="content">
+                <img src="~/images/rooms5.jpg" />
+                <div class="title">Kitchen</div><a class="close" href="#gallery"></a>
+            </div>
+        </div>
+        <div class="lightbox" id="lightbox-12">
+            <div class="content">
+                <img src="~/images/villa4.jpg" />
+                <div class="title">Seaview Swimming Pool</div><a class="close" href="#gallery"></a>
+            </div>
+        </div>
+        <div class="lightbox" id="lightbox-13">
+            <div class="content">
+                <img src="~/images/view3.jpg" />
+                <div class="title">Balcony Stunning Views</div><a class="close" href="#gallery"></a>
+            </div>
+        </div>
+        <div class="lightbox" id="lightbox-14">
+            <div class="content">
+                <img src="~/images/rooms6.jpg" />
+                <div class="title"> Seaview Balcony</div><a class="close" href="#gallery"></a>
+            </div>
+        </div>
+        <div class="lightbox" id="lightbox-15">
+            <div class="content">
+                <img src="~/images/villa5.jpg" />
+                <div class="title">Seaview Breakfast</div><a class="close" href="#gallery"></a>
+            </div>
+        </div>
+        <div class="lightbox" id="lightbox-16">
+            <div class="content">
+                <img src="~/images/rooms7.jpg" />
+                <div class="title">King Size Beddroms</div><a class="close" href="#gallery"></a>
+            </div>
+        </div>
+        <div class="lightbox" id="lightbox-17">
+            <div class="content">
+                <img src="~/images/villa6.jpg" />
+                <div class="title">Private Swimming Pool</div><a class="close" href="#gallery"></a>
+            </div>
+        </div>
+        <div class="lightbox" id="lightbox-18">
+            <div class="content">
+                <img src="~/images/rooms8.jpg" />
+                <div class="title">Studio Apartments</div><a class="close" href="#gallery"></a>
+            </div>
+        </div>
+    </section>
+</body>

@@ -1,0 +1,984 @@
+
+
+/* Universal Styles */
+
+html {
+    
+    font-family: Lato, sans;
+    font-size: 16px;
+    background-color: #def2f1;
+    color: #1b4d89;
+}
+
+html, body, div, li, nav, a, h1 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+html, body, menu, nav, section, div {
+    display: block;
+}
+
+html, body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url("/images/background.jpeg") center/cover no-repeat fixed;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures wrapper takes full viewport height */
+}
+.container {
+    flex-grow: 1; /* Makes main content grow to push footer down */
+}
+.maincontent {
+    flex-grow: 1;
+    position: relative;
+    top: 5.0625rem; /* To offset for fixed header. */
+    padding-bottom: 2rem;
+}
+
+.image-container {
+    overflow: hidden;
+}
+
+    .image-container img {
+        display: block;
+        max-width: 100%;
+    }
+
+.center {
+    text-align: center;
+}
+/*
+.button {
+    border-radius: 4px;
+    background-color: #ED8105;
+    color: #feffff;
+}
+*/
+@media only screen and (max-width: 760px) {
+    .maincontent {
+        top: 5.5625rem;
+    }
+}
+
+/* Header */
+
+header {
+    display: block;
+    position: fixed;
+    align-items: center;
+    z-index: 100;
+    width: 100%;
+    opacity: 0.9;
+    border-bottom: solid 1px #def2f1;
+    background-color: #feffff;
+    height: 5rem;
+}
+
+    header .navcontainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.9rem;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+        text-shadow: 2px 2px #5680E9;
+    }
+
+.logo img {
+    max-height: 4rem;
+    padding-right: 3rem;
+    float: left;
+}
+
+header .logo {
+    display: flex;
+    flex: 1;
+    justify-content: left;
+    align-items: center;
+    text-decoration: none;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    padding-left: 3.5rem;
+}
+
+nav a {
+    vertical-align: bottom;
+    line-height: 1.6;
+    color: #5680E9;
+    text-decoration: none;
+}
+
+header a:hover {
+    text-shadow: 0px 0px 8px #1b4d89;
+}
+
+@media only screen and (max-width: 1100px) {
+    header .navcontainer {
+        padding: .5rem 5rem;
+    }
+
+    header .navbar ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+
+    header .navbar li {
+        padding: 0;
+    }
+
+    .logo h1 {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .navcontainer {
+        padding: 1rem;
+    }
+
+    nav .navbar ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+
+    nav li {
+        padding: 0;
+    }
+
+    .logo h1 {
+        display: none;
+    }
+}
+
+/* About Section */
+
+#home {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 43.5rem;
+    /*background: url(/images/image1.jfif) center center no-repeat;*/
+    background-size: cover;
+    text-align: left;
+}
+
+#aboutsect {
+    position: relative;
+    top: 10.625rem;
+    left: 10%;
+    padding: 0 2.5rem 2.5rem 2.5rem;
+}
+
+    #aboutsect .aboutcontent {
+        width: 43.75rem;
+        margin-top: 2rem;
+        font-family: Nunito, sans-serif;
+        color: #feffff;
+        font-size: 1.25rem;
+        line-height: 1.2;
+    }
+
+    #aboutsect .aboutheader {
+        padding-bottom: 3rem;
+    }
+
+    #aboutsect h1 {
+        font-size: 3.125rem;
+        line-height: 0.5;
+    }
+
+    #aboutsect h2 {
+        font-size: 2.25rem;
+        line-height: 0.5;
+    }
+
+.bookingbutton .btn-primary {
+    background-color: #ED8105;
+    border-color: #0066cc;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+    .bookingbutton .btn-primary:hover {
+        background-color: #004c99;
+        border-color: #ED8105;
+    }
+
+/*
+ #aboutsect .button {
+    margin-top: 1.625rem;
+    padding: 0.75rem;
+}
+*/
+   
+
+@media only screen and (max-width: 760px) {
+    #home {
+        left: .5rem;
+        align-items: center;
+        justify-content: center;
+        height: 28rem;
+    }
+
+    #aboutsect {
+        position: static;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        border: none;
+    }
+
+        #aboutsect .content {
+            margin-top: 0;
+        }
+
+        #aboutsect h1 {
+            font-size: 2.25rem;
+        }
+
+    #about-sect h2 {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    #home {
+        height: 20rem;
+    }
+
+    #aboutsect h1 {
+        font-size: 1.25rem;
+    }
+
+    #aboutsect h2 {
+        font-size: 1rem;
+    }
+}
+
+/* Features Section */
+
+#toursect {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 5%;
+    background-color: #feffff;
+}
+
+.tour {
+    flex: 1;
+    padding: 2rem;
+    margin: 0px 1.25rem;
+    background-color: #feffff;
+}
+
+    .tour .image-container {
+        width: 90%;
+        height: 65%;
+        margin: 0 auto;
+    }
+
+    .tour img {
+        height: 300px;
+        width: 500px;
+        margin: auto;
+    }
+
+    .tour h2 {
+        padding-bottom: .5rem;
+        font-size: 2.25rem;
+        font-weight: bold;
+        line-height: 1.2;
+        color: #1b4d89;
+    }
+
+    .tour h3 {
+        font-size: 1rem;
+        line-height: 1.2;
+        font-weight: 300;
+        color: #1b4d89;
+    }
+
+@media only screen and (max-width: 760px) {
+    #toursect {
+        align-items: center;
+        justify-content: center;
+        height: 28rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    #toursect {
+        height: 20rem;
+    }
+}
+
+/* Gallery Section */
+
+#gallerysect {
+    padding: 4rem 0;
+    background-color: #5680E9;
+}
+
+    #gallerysect .content {
+        padding: 0 .625rem;
+        margin-bottom: 5rem;
+    }
+
+        #gallerysect .content h2 {
+            font-size: 2.25rem;
+            font-weight: bold;
+            color: white;
+            opacity: 100%;
+        }
+
+        #gallerysect .content h3 {
+            font-size: 1rem;
+            line-height: 1.4;
+            font-weight: 300;
+            color: white;
+        }
+
+    #gallerysect .images-container {
+        display: flex;
+        max-width: 100%;
+        max-height: 250px;
+        padding: 0 1%;
+    }
+
+.images-container {
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+    .images-container img {
+        height: 15.625rem;
+        width: 12.5rem;
+    }
+
+
+/* Testimonial Section */
+
+#testsect {
+    background-color: #def2f1;
+    padding: 5rem 0;
+    margin-bottom: 2rem;
+}
+
+    #testsect .content {
+        padding: 5rem 0;
+    }
+
+    #testsect .quote {
+        padding-right: 1.875rem;
+        font-family: Ubuntu, serif;
+        font-size: 1.875rem;
+        line-height: 1.1;
+        font-style: italic;
+    }
+
+
+/* Footer */
+
+footer {
+    background-color: #84CEEB;
+    padding: 1.5rem 2rem;
+    color: #feffff;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo-img {
+    max-height: 50px;
+    margin-right: 10px;
+}
+
+/* Responsive padding for navbar items */
+.navbar-nav .nav-item {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* On smaller screens, reduce padding between items */
+@media (max-width: 768px) {
+    .navbar-nav .nav-item {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+}
+
+/* Further reduce on very small screens */
+@media (max-width: 576px) {
+    .navbar-nav .nav-item {
+        padding-left: 0.2rem;
+        padding-right: 0.2rem;
+    }
+}
+
+/* Brand name enhancements */
+.brand-name {
+    font-size: 2rem; /* Adjust this to fit your design */
+    font-weight: 700; /* Bold font */
+    color: #1b4d89; /* Main theme color */
+    letter-spacing: 1px; /* Adds spacing between letters */
+    text-transform: uppercase; /* Makes the name uppercase */
+}
+
+@media (max-width: 768px) {
+    .brand-name {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #5680E9; /* Primary color */
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+    .navbar-nav .nav-link:hover {
+        background-color: #84CEEB; /* Highlight background */
+        color: white; /* Change text color on hover */
+        border-radius: 5px; /* Smooth corners */
+    }
+
+    /* Button-like appearance for special menu items */
+    .navbar-nav .nav-link.button-link {
+        background-color: #ED8105;
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+        .navbar-nav .nav-link.button-link:hover {
+            background-color: #1b4d89; /* Darken the color on hover */
+        }
+
+
+/* Testimonial Section Styles */
+#testsect {
+    background-color: #def2f1;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial-container {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    max-width: 800px; /* Adjust width based on your design */
+    justify-content: flex-start;
+    transition: transform 0.5s ease; /* Smooth scrolling */
+}
+
+.testimonial {
+    flex: 0 0 100%; /* Each testimonial takes up full width of container */
+    padding: 1.5rem;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.quote {
+    font-family: "Ubuntu", serif;
+    font-size: 1.875rem;
+    line-height: 1.4;
+    font-style: italic;
+    color: #1b4d89;
+}
+
+.author {
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: #5680E9;
+}
+
+
+#home .center {
+    position: absolute;
+    text-align: center;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex: 1;
+}
+
+    #home .center h1 {
+        color: white;
+        font-size: 3.25rem;
+    }
+
+#home .center h4 {
+    color: white;
+    font-size: 2rem;
+    font-weight: 200;
+    padding-top: -50px;
+    font-style: italic;
+}
+
+#home .center p {
+    color: white;
+    font-size: 1.25rem;
+    
+}
+/*
+#home .center .button {
+    margin: 50px 280px;
+    margin-left: 300px;
+}
+
+    #home .center .button {
+        cursor: pointer;
+        color: #feffff;
+        height: 1.5rem;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+
+        #home .center .button span a {
+            position: absolute;
+            margin: auto 0;
+            outline: none;
+            color: #feffff;
+            border-radius: 4px;
+            padding: 5px;
+            font-size: 1.25rem;
+            background-color: #ED8105;
+            justify-content: center;
+            align-items: center;
+        }
+
+#home .center .button span a:hover {
+    color: #ED8105;
+    background-color: #feffff;
+    outline: none;
+    text-decoration: none;
+}*/
+
+/* Custom styling for the booking form */
+.booking-form {
+    background: rgba(255, 255, 255, 0.5); /* Transparent background */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 6rem auto;
+}
+
+    .booking-form h2 {
+        font-size: 2.25rem;
+        margin-bottom: 20px;
+        color: #003366;
+    }
+
+    .booking-form label {
+        font-weight: bold;
+        color: #003366;
+    }
+
+    .booking-form .form-control {
+        border-radius: 5px;
+        border: 1px solid #ced4da;
+    }
+
+    .booking-form .btn-primary {
+        background-color: #ED8105;
+        border-color: #0066cc;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+        .booking-form .btn-primary:hover {
+            background-color: #004c99;
+            border-color: #004c99;
+        }
+
+.form-group.mb-3 label {
+    margin-bottom: 5px;
+}
+
+.form-group.mb-3 select,
+.form-group.mb-3 input {
+    background-color: #ffffff;
+}
+
+/* Styling for booking description container */
+
+.description-container {
+    padding: 20px;
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+    .description-container h2 {
+        font-size: 28px;
+        text-align: center;
+        color: #003366;
+        margin-bottom: 15px;
+    }
+
+    .description-container p {
+        color: #666;
+    }
+
+.gallery_p {
+    background: white;
+    margin-top: 6rem;
+}
+
+.accomodation_description {
+    margin-left: 8rem;
+    margin-right: 8rem;
+    text-align: center;
+}
+
+    .accomodation_description h2 {
+        font-size: 2rem;
+        padding: 3rem;
+        color: #1b4d89;
+    }
+
+    .accomodation_description p {
+        color: var(--dark);
+        padding-right: 5rem;
+        color: #1b4d89;
+    }
+
+#gallery {
+    display: grid;
+    height: calc(100vh - 10px);
+    grid-template: repeat(6, 1fr)/repeat(6, 1fr);
+    grid-gap: 0.5em;
+    margin: 50px;
+    background: white;
+}
+
+@media (max-width: 800px) {
+    #gallery {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+        #gallery > div {
+            width: 48%;
+            margin: 1%;
+        }
+}
+
+@media (max-width: 800px) and (max-width: 350px) {
+    #gallery > div {
+        width: 98%;
+    }
+}
+
+/*Gallery Styling*/
+#gallery > div:nth-child(6n+1) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+#gallery > div:nth-child(2) {
+    grid-column: span 3;
+    grid-row: span 3;
+}
+
+#gallery > div:nth-child(4) {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+#gallery > div > a {
+    opacity: 0;
+    position: absolute;
+    color: #000;
+    background-color: #000;
+    font: bold 4em "Helvetica";
+    text-shadow: 0 -1px 5px #fff, -1px 0px 5px #fff, 0 1px 5px #fff, 1px 0px 5px #fff;
+    padding: 2rem;
+    mix-blend-mode: difference;
+    width: 100%;
+    height: 100%;
+    transition: all ease 1s;
+}
+
+#gallery > div > img {
+    width: 100%;
+    min-height: 100%;
+    transition: all ease 1s;
+}
+
+#gallery > div:hover img {
+    filter: blur(2px);
+}
+
+#gallery > div:hover a {
+    opacity: 1;
+}
+
+#gallery > div {
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#gallery div,
+#gallery a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+[id^=lightbox-] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    opacity: 0;
+    transition: opacity 450ms ease-in-out;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+    [id^=lightbox-]:target {
+        opacity: 1;
+        pointer-events: inherit;
+    }
+
+        [id^=lightbox-]:target img {
+            filter: blur(0);
+        }
+
+    [id^=lightbox-] .content {
+        max-width: 90%;
+        position: relative;
+        color: #fff;
+    }
+
+        [id^=lightbox-] .content:hover > a.close {
+            opacity: 1;
+            transform: scale(1, 1);
+        }
+
+        [id^=lightbox-] .content:hover > .title {
+            opacity: 1;
+            transform: translateY(-3px);
+        }
+
+            [id^=lightbox-] .content:hover > .title::after {
+                opacity: 1;
+            }
+
+        [id^=lightbox-] .content > * {
+            transition: all 450ms ease-in-out;
+        }
+
+    [id^=lightbox-] .title {
+        display: block;
+        margin: 0;
+        padding: 1em;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        transform: translateY(50%);
+        font-size: 1.5em;
+        opacity: 0;
+        font-size: 16px;
+    }
+
+        [id^=lightbox-] .title::after {
+            content: " ";
+            background-color: rgba(0, 0, 0, 0.4);
+            bottom: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            transition: all 350ms ease-in-out 250ms;
+            opacity: 0;
+            transform-origin: bottom;
+            mix-blend-mode: soft-light;
+        }
+
+    [id^=lightbox-] img {
+        max-height: 70vh;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        filter: blur(5px);
+    }
+
+    [id^=lightbox-] a.close {
+        width: 2em;
+        height: 2em;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: scale(0, 0);
+        opacity: 0;
+        transform-origin: right top;
+        text-decoration: none;
+        color: #fff;
+    }
+
+        [id^=lightbox-] a.close::after {
+            content: "x";
+        }
+
+/* Experiences styling*/
+section {
+    background: #F4F4F4;
+    padding: 50px 0;
+    margin-top: 6rem;
+}
+
+
+.atraction {
+    background: white;
+    color: #1b4d89;
+}
+
+.cnt {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+
+.experiences_description h3 {
+    font-size: 2rem;
+    text-align: center;
+    padding-left: 150px;
+    padding-right: 100px;
+}
+
+.experiences_description p {
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.safety1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    background: white;
+    text-align: justify;
+    padding-left: 50px;
+    padding-right: 20px;
+    margin-top: 0;
+    padding-top: 50px;
+}
+
+    .safety1 .saf_img {
+        padding-left: 80px;
+    }
+
+    .safety1 .des_img {
+        padding-left: 80px;
+    }
+
+        .safety1 .des_img p {
+            padding-left: 0;
+        }
+
+        .safety1 .des_img h4 {
+            font-size: 1.5rem;
+            font-weight: bolder;
+            text-align: center;
+        }
+
+    .safety1 .saf_img1 {
+        padding-left: 10px;
+        box-shadow: 0.5rem 1rem 1rem rgba(0, 0, 0, 0.4);
+    }
+
+        .safety1 .saf_img1:hover {
+            transform: scale(1.5);
+            transition: 0.5s;
+        }
+
+.login-form {
+    background: rgba(255, 255, 255, 0.5); /* Transparent background */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 6rem auto;
+}
+
+    .login-form h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        color: #003366;
+    }
+
+    .login-form label {
+        font-weight: bold;
+        color: #003366;
+    }
+
+    .login-form .btn-primary {
+        background-color: #ED8105;
+        border-color: #0066cc;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+        margin: 10px;
+    }
+
+        .login-form .btn-primary:hover {
+            background-color: #004c99;
+            border-color: #004c99;
+         
+        }
+
+    .alert-success{
+        margin-top: 6rem;
+    }

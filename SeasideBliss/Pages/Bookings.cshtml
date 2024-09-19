@@ -1,0 +1,74 @@
+﻿@page
+@model SeasideBliss.Pages.BookingsModel
+@{
+}
+<body>
+    <form method="post" class="booking-form">
+        <h2>Book Your Stay</h2>
+
+        <!-- Destination -->
+        <div class="form-group mb-3">
+            <label for="destination">Destination</label>
+            <select class="form-control" id="destination" asp-for="Input.Destination" required>
+                <option value="">Select destination type</option>
+                <option value="town">Town</option>
+                <option value="beach">Beach</option>
+            </select>
+            <span asp-validation-for="Input.Destination" class="text-danger"></span>
+        </div>
+
+        <!-- Check-in and Check-out Dates -->
+        <div class="row">
+            <div class="col-md-6 form-group mb-3">
+                <label for="checkin">Check-in Date</label>
+                <input type="date" class="form-control" id="checkin" asp-for="Input.CheckInDate" required min="@DateTime.Now.ToString("yyyy-MM-dd")" />
+                <span asp-validation-for="Input.CheckInDate" class="text-danger"></span>
+            </div>
+            <div class="col-md-6 form-group mb-3">
+                <label for="checkout">Check-out Date</label>
+                <input type="date" class="form-control" id="checkout" asp-for="Input.CheckOutDate" required min="@DateTime.Now.ToString("yyyy-MM-dd")" />
+                <span asp-validation-for="Input.CheckOutDate" class="text-danger"></span>
+            </div>
+        </div>
+
+        <!-- Number of Adults and Children -->
+        <div class="row">
+            <div class="col-md-6 form-group mb-3">
+                <label for="adults">Number of Adults</label>
+                <input type="number" class="form-control" id="adults" asp-for="Input.NumberOfAdults" min="1" value="1" required />
+                <span asp-validation-for="Input.NumberOfAdults" class="text-danger"></span>
+            </div>
+            <div class="col-md-6 form-group mb-3">
+                <label for="children">Number of Children</label>
+                <input type="number" class="form-control" id="children" asp-for="Input.NumberOfChildren" min="0" value="0" />
+                <span asp-validation-for="Input.NumberOfChildren" class="text-danger"></span>
+            </div>
+        </div>
+
+        <!-- Type of Accommodation -->
+        <div class="form-group mb-3">
+            <label for="accommodation">Type of Accommodation</label>
+            <select class="form-control" id="accommodation" asp-for="Input.Accommodation" required>
+                <option value="">Select type</option>
+                <option value="apartment">Apartment</option>
+                <option value="villa">Villa</option>
+            </select>
+            <span asp-validation-for="Input.Accommodation" class="text-danger"></span>
+        </div>
+
+        <!-- Email Field -->
+        <div class="form-group mb-3">
+            <label for="email">Your Email</label>
+            <input type="email" class="form-control" id="email" asp-for="Input.UserEmail" required />
+            <span asp-validation-for="Input.UserEmail" class="text-danger"></span>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary">Submit Booking</button>
+    </form>
+
+    <div class="description-container">
+        <h2>Seaside Bliss</h2>
+        <p>Plan your perfect seaside getaway by selecting your destination, dates, and accommodation type. We offer a variety of options to suit your needs, from relaxing beach spots to vibrant town stays.</p>
+    </div>
+</body>
